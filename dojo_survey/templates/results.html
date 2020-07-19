@@ -9,10 +9,10 @@
 <body>
     <div id="wrapper">
         <h3 id="results-heading">Submitted Info</h3>
-        <p><span class="results-label">Name: </span> {{ name }}</p>
-        <p><span class="results-label">Location: </span> {{ location }}</p>
-        <p><span class="results-label">Language: </span> {{ language }}</p>
-        <p><span class="results-label">Comment: </span> {{ comment }}</p>
+        <p><span class="results-label">Name: </span> {{ session['name'] }}</p>
+        <p><span class="results-label">Location: </span> {{ session['location'] }}</p>
+        <p><span class="results-label">Language: </span> {{ session['language'] }}</p>
+        <p><span class="results-label">Comment: </span> {{ session['comment'] }}</p>
         <a href="/" id="back-button">Go Back</a>
     </div>
 </body>
