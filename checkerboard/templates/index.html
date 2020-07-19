@@ -8,9 +8,27 @@
 </head>
 <body>
     <div class="wrapper">
-        {% for n in range(0, num) %}
-            <div class="box"></div>
-        {% endfor %}
+        <table>
+            {% for row in range(0, rows) %}
+            <tr>
+                {% for column in range(0, columns) %}
+                    {% if column % 2 == 0 %}
+                        {% if row % 2 == 0 %}
+                            <td class="box" style="background-color: {{ color1 }};"></td>
+                        {% elif row % 2 == 1%}
+                            <td class="box" style="background-color: {{ color2 }};"></td>
+                        {% endif %}
+                    {% elif column % 2 == 1 %}
+                        {% if row % 2 == 1%}
+                            <td class="box" style="background-color: {{ color1 }};"></td>
+                        {% elif row % 2 == 0 %}
+                            <td class="box" style="background-color: {{ color2 }};"></td>
+                        {% endif %}
+                    {% endif %}
+                {% endfor %}
+            </tr>
+            {% endfor %}
+        </table>
     </div>
 </body>
 </html>
