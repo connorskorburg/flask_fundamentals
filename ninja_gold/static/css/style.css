@@ -3,7 +3,6 @@
     padding: 0;
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
-    /* outline: 1px solid red; */
 }
 
 #wrapper{
@@ -19,14 +18,21 @@
     width: 1190px;
     border: 1px solid black;
     border-radius: 5px;
-    height: 150px;
+    height: 250px;
     margin: 0 30px;
+    overflow-y: scroll;
+    padding: 5px;
 }
 
 #activity{
-    margin-left: 30px;
+    margin: 0 30px;
     padding: 15px 5px;
     font-weight: bold;
+}
+
+#activity a{
+    margin-left: 1025px;
+    text-decoration: none;
 }
 
 #counter{
@@ -58,8 +64,7 @@
     margin-bottom: 25px;
 }
 
-.card form button{
-    margin: 25px 0;
+.card form button, #activity a{
     padding: 5px 10px;
     border: none;
     background-color: #777;
@@ -70,7 +75,14 @@
     cursor: pointer;
 }
 
-.card form button:hover{
+.card form button{
+    margin: 25px 0;
+}
+
+.card form button:hover, #activity a:hover{
     background-color: #666;
     color: rgb(226, 224, 224);
 }
+
+.green{color: green; font-weight: bold;}
+.red{color: red; font-weight: bold0;}

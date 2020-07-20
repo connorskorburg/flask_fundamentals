@@ -10,40 +10,48 @@
     <div id="wrapper">
         <div id="inner-wrapper">
             <div id="counter">
-                <h3>Gold: </h3>
+                <h3>Gold: {{ session['gold'] }}</h3>
             </div>
             <div class="card farm">
                 <h2>Farm</h2>
                 <p>(earns 10-20 golds)</p>
-                <form action="/proccess_money" method="post">
-                    <input type="hidden" name="casino">
+                <form action="/process_money" method="post">
+                    <input type="hidden" name="location" value="farm">
                     <button type="submit">Find Gold!</button>
                 </form>
             </div><div class="card cave">
                 <h2>Cave</h2>
                 <p>(earns 5-10 golds)</p>
-                <form action="/proccess_money" method="post">
-                    <input type="hidden" name="casino">
+                <form action="/process_money" method="post">
+                    <input type="hidden" name="location" value="cave">
                     <button type="submit">Find Gold!</button>
                 </form>
             </div><div class="card house">
                 <h2>House</h2>
                 <p>(earns 2-5 golds)</p>
-                <form action="/proccess_money" method="post">
-                    <input type="hidden" name="casino">
+                <form action="/process_money" method="post">
+                    <input type="hidden" name="location" value="house">
                     <button type="submit">Find Gold!</button>
                 </form>
            </div><div class="card casino">
                 <h2>Casino</h2>
                 <p>(earns/takes 0-50 golds)</p>
-                <form action="/proccess_money" method="post">
-                    <input type="hidden" name="casino">
+                <form action="/process_money" method="post">
+                    <input type="hidden" name="location" value="casino">
                     <button type="submit">Find Gold!</button>
                 </form>
             </div>
-            <p id="activity">Activities: </p>
+            <div id="activity">Activities: 
+                <a href="/reset_gold">Reset</a>
+            </div>
             <div id="activities">
-
+                {% for display in session['gold_display']|reverse %}
+                    {% if 'Earned' in display %}
+                        <p class="green">{{ display }}</p>
+                    {% elif 'Lost' in display %}
+                        <p class="red">{{ display }}</p>
+                    {% endif %}
+                {% endfor%}
             </div>
         </div>
     </div>
