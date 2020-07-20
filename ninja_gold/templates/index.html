@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ninja Gold</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div id="wrapper">
+        <div id="inner-wrapper">
+            <div id="counter">
+                <h3>Gold: </h3>
+            </div>
+            <div class="card farm">
+                <h2>Farm</h2>
+                <p>(earns 10-20 golds)</p>
+                <form action="/proccess_money" method="post">
+                    <input type="hidden" name="casino">
+                    <button type="submit">Find Gold!</button>
+                </form>
+            </div><div class="card cave">
+                <h2>Cave</h2>
+                <p>(earns 5-10 golds)</p>
+                <form action="/proccess_money" method="post">
+                    <input type="hidden" name="casino">
+                    <button type="submit">Find Gold!</button>
+                </form>
+            </div><div class="card house">
+                <h2>House</h2>
+                <p>(earns 2-5 golds)</p>
+                <form action="/proccess_money" method="post">
+                    <input type="hidden" name="casino">
+                    <button type="submit">Find Gold!</button>
+                </form>
+           </div><div class="card casino">
+                <h2>Casino</h2>
+                <p>(earns/takes 0-50 golds)</p>
+                <form action="/proccess_money" method="post">
+                    <input type="hidden" name="casino">
+                    <button type="submit">Find Gold!</button>
+                </form>
+            </div>
+            <p id="activity">Activities: </p>
+            <div id="activities">
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>

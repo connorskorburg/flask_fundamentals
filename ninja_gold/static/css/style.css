@@ -1,0 +1,76 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    /* outline: 1px solid red; */
+}
+
+#wrapper{
+    width: 1250px;
+    margin: 0 auto;
+}
+
+#inner-wrapper{
+    /* margin-top: 50px; */
+}
+
+#activities{
+    width: 1190px;
+    border: 1px solid black;
+    border-radius: 5px;
+    height: 150px;
+    margin: 0 30px;
+}
+
+#activity{
+    margin-left: 30px;
+    padding: 15px 5px;
+    font-weight: bold;
+}
+
+#counter{
+    margin: 15px 31.25px;
+    width: 250px;
+    border: 1px solid black;
+    height: 50px;
+    padding: 5px;
+    border-radius: 6px;
+    font-weight: bold;
+}
+#counter h3{
+    height: 40px;
+    padding-top: 5px;
+}
+
+.card{
+    width: 250px;
+    border: 1px solid black;
+    border-radius: 6px;
+    margin: 0 31.25px;
+    height: 200px;
+    display: inline-block;
+    padding: 20px 15px; 
+    text-align: center;
+}
+
+.card h2{
+    margin-bottom: 25px;
+}
+
+.card form button{
+    margin: 25px 0;
+    padding: 5px 10px;
+    border: none;
+    background-color: #777;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+.card form button:hover{
+    background-color: #666;
+    color: rgb(226, 224, 224);
+}
